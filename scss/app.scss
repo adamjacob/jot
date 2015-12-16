@@ -1,0 +1,33 @@
+html, body {
+	height:100%;
+	background-color:#FFF;
+	font-family:sans-serif;
+	overflow:hidden;
+	margin:0;
+}
+
+.app {
+  height:100%;
+}
+
+* {
+	box-sizing:border-box;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius:4px;
+}
+
+@import 'partials/editor';
+@import 'partials/preview';
+@import 'partials/status-bar';

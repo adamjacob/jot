@@ -1,0 +1,47 @@
+.status-bar {
+
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+
+	padding: 0 10px 0 10px;
+	font-size: 10pt;
+	line-height:30px;
+	font-family:inherit;
+
+	border-top:#DDD 1px solid;
+	color:#333;
+
+	height:30px;
+	z-index:5;
+
+	background-color:#FFF;
+
+	box-shadow: -1px 0px 2px rgba(0,0,0,0.1);
+
+	.preview-button {
+		float:right;
+		width:80px;
+		border:#DDD 1px solid;
+		text-transform:uppercase;
+		font-size:8pt;
+		text-align:center;
+		margin:3px;
+		line-height:20px;
+		border-radius:5px;
+		color:#888;
+		user-select:none;
+		margin-right:-7px;
+		&:hover {
+			cursor:pointer;
+			background-color:#EEE;
+		}
+		&.preview-open {
+			background-color:#26A8FF;
+			color:#FFF;
+			border-color:#26A8FF;
+		}
+	}
+
+}

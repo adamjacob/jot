@@ -1,2 +1,1 @@
-# jot-editor
-Markdown Editor
+# Jot - Themeable MarkDown Editor
