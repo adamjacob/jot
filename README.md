@@ -1,1 +1,1 @@
-# Jot - Themeable MarkDown Editor
+![Jot](https://cloud.githubusercontent.com/assets/1127437/11833058/cd75f8de-a373-11e5-9d40-cf318ae70a13.png)
