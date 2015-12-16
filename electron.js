@@ -15,7 +15,7 @@ require('crash-reporter').start();
 var mainWindow = null;
 
 // Events
-app.on('window-all-closed', require(__dirname+'/app-level/events/window-all-closed.js'));
-app.on('ready', require(__dirname+'/app-level/events/ready.js'));
+app.on('window-all-closed', require(__dirname+'/app/events/window-all-closed.js'));
+app.on('ready', require(__dirname+'/app/events/ready.js'));
 
-var saveFile = require(__dirname+'/app-level/save-file.js');
+var saveFile = require(__dirname+'/app/save-file.js');

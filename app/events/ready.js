@@ -14,10 +14,10 @@ module.exports = function() {
 	mainWindow = new BrowserWindow({width: 800, height: 600});
 
 	var uiPath = __dirname;
-			uiPath = uiPath.replace('/app-level/events', '');
+			uiPath = uiPath.replace('/app/events', '');
 
 	// and load the index.html of the app.
-	mainWindow.loadUrl('file://' + uiPath + '/index.html');
+	mainWindow.loadUrl('file://' + uiPath + '/ui/index.html');
 
 	// Open the DevTools.
 	mainWindow.webContents.openDevTools();
@@ -28,13 +28,12 @@ module.exports = function() {
 	console.log(userSettings.theme);
 
 	mainWindow.webContents.on('dom-ready', function(){
-		//if(!userSettings.theme){
-			userSettings.theme.path = app.getPath('userData') + '/themes/Classic/main.css';
-		//}
+		if(userSettings.theme){
+			mainWindow.webContents.send('load-theme', userSettings.theme.path);
+		}
 			//var css = fs.readFileSync(userSettings.theme.path, 'utf8');
 			//console.log('CSS:'+css);
 			//mainWindow.webContents.insertCSS(css);
-			mainWindow.webContents.send('load-theme', userSettings.theme.path);
 	});
 
 	// File Save
